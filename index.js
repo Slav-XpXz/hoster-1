@@ -28,6 +28,27 @@ for(const file of commandFiles){
 
 
 
+client.on("messageCreate", message => {
+
+    
+    const repl = new MessageEmbed()
+    .setTitle("No No word")
+    .setDescription(`${message.author} that is a no no word!`)
+    let blacklisted = ['Nigger', 'nigger'];
+    let foundInText = false;
+    for (var i in blacklisted) {
+        if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) foundInText = true;
+    }
+    if (foundInText) {
+        message.delete();
+        message.channel.send({ embeds: [repl] })
+    }    
+})
+
+
+
+
+
 client.on("messageCreate", message =>{
     if(!message.content.startsWith(prefix) || message.author.bot) return;
  
