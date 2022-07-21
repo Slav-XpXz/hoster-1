@@ -12,7 +12,7 @@ module.exports = {
             {
                 const target = message.guild.members.cache.get(member.id);
                 target.ban();
-                message.channel.send(`${member.id} has been banned, what an L :skull:`)
+                message.channel.send(`${member.tag} has been banned, what an L :skull:`)
             }
             catch
             {
