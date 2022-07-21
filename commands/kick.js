@@ -12,7 +12,7 @@ module.exports = {
             {
                 const target = message.guild.members.cache.get(member.id);
                 target.kick();
-                message.channel.send(`${member.id} has been kicked, what an L :skull:`)
+                message.channel.send(`${member.tag} has been kicked, what an L :skull:`)
             }
             catch
             {
